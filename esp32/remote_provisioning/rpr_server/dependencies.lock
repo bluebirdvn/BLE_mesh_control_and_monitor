@@ -1,0 +1,56 @@
+dependencies:
+  espressif/cmake_utilities:
+    component_hash: 351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.1'
+    source:
+      registry_url: https://components.espressif.com
+      type: service
+    version: 0.5.3
+  espressif/lightbulb_driver:
+    component_hash: 8ee3d1cc816bddbc21ee05d33b05249c04a6baa1968e4edb84a5c3c93c9afab3
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=4.3.2'
+    - name: espressif/cmake_utilities
+      registry_url: https://components.espressif.com
+      require: private
+      version: 0.*
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 0.5.5
+  example_init:
+    dependencies: []
+    source:
+      path: C:\Users\Espressif\frameworks\esp-idf-v5.5.5\examples\bluetooth\esp_ble_mesh\common_components\example_init
+      type: local
+    version: '*'
+  example_nvs:
+    dependencies: []
+    source:
+      path: C:\Users\Espressif\frameworks\esp-idf-v5.5.5\examples\bluetooth\esp_ble_mesh\common_components\example_nvs
+      type: local
+    version: '*'
+  idf:
+    source:
+      type: idf
+    version: 5.5.5
+  light_driver:
+    dependencies:
+    - name: espressif/lightbulb_driver
+      version: ==0.5.5
+    source:
+      path: C:\Users\Espressif\frameworks\esp-idf-v5.5.5\examples\bluetooth\esp_ble_mesh\common_components\light_driver
+      type: local
+    version: '*'
+direct_dependencies:
+- example_init
+- example_nvs
+- light_driver
+manifest_hash: 88ef2ebd4ccf8562ba573fb9ef1ee349e07fc6bbc45980f85890bc6a8fef69f6
+target: esp32c6
+version: 2.0.0
